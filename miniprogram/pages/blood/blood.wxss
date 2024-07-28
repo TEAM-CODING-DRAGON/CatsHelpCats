@@ -1,0 +1,62 @@
+/* pages/blood/blood.wxss */
+.page_placeholder {
+    height: 15px;
+    background-color:rgb(173, 188, 230);
+    border-radius: 10px;
+}
+
+.match_info_view {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user_view {
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.pets_detail {
+    padding: 10px;
+}
+
+.pets_info {
+    margin-left: 10px;
+    color: gray;
+}
+
+.user_welcome_view {
+    width: 40%;
+}
+
+.user_welcome {
+    margin-left: 50%;
+}
+
+.match_pets_view {
+    height: 420px;
+    display: grid;
+    margin-top: 50px;
+}
+
+.match_pet_view {
+    text-align: center;
+}
+
+.match_pet {
+    width: 30%;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+.home_navi_view {
+    background-color:whitesmoke;
+    border-radius: 10px;
+}
+
+.bottom_navi_btn {
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

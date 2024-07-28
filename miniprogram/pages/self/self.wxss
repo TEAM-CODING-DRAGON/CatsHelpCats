@@ -1,0 +1,12 @@
+/* pages/hospital/hospital.wxss */
+.home_navi_view {
+    background-color:whitesmoke;
+    border-radius: 10px;
+}
+
+.bottom_navi_btn {
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

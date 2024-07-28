@@ -1,0 +1,31 @@
+<!--pages/pet_detail/pet_detail.wxml-->
+<image mode="widthFix" src="../../img/welcome.png" style="width: 100%;"></image>
+<view class="pet_detail_view">
+    <image class="pet_detail" mode="widthFix" src="../../img/pet1.png"></image>
+    <view class="pet_info">
+        <text>爱宠昵称：O仔</text>
+    </view>
+    <view class="pet_info">
+        <text>血型：A</text>
+    </view>
+    <view class="pet_info">
+        <text>年龄：3岁</text>
+    </view>
+    <view class="pet_info">
+        <text>性别：弟弟</text>
+    </view>
+    <view class="pet_info">
+        <text>住址：四川省成都市高新西区西源大道1号爱宠小屋</text>
+    </view>
+    <view class="pet_info" style="display: flex;">
+        <text class="pet_info" style="margin-left: 20px;margin-top: 10px;">铲屎官联系方式：</text>
+        <button class="user_contact_btn">点我获取</button>
+    </view>
+</view>
+<view class="page_placeholder"></view>
+<view class="home_navi_view">
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png" bind:tap="onHome"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/trans.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png" bind:tap="onSelf"></image>
+    <view style="height: 100px"></view>
+</view>

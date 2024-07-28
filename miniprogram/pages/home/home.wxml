@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<image mode="widthFix" src="../../img/welcome.png" style="width: 100%;"></image>
+<view class="home_view">
+    <view class="title_view">
+        <title class="title">爱宠互助平台</title>
+    </view>
+    <view class="introduce">爱宠互助平台是一个铲屎官互助的平台，我们可以在平台上寻求血型互助或其他服务</view>
+    <view class="home_content">
+        <image class="home_btn" mode="widthFix" src="../../img/blood_transport.png" bind:tap="onBlood">血型匹配</image>
+        <image class="home_btn" mode="widthFix" src="../../img/hospital.png" bind:tap="onHospital">医院匹配</image>
+    </view>
+    <view style="height: 100px;"></view>
+</view>
+<view class="home_navi_view">
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png" bind:tap="onHome"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/trans.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png" bind:tap="onSelf"></image>
+    <view style="height: 100px"></view>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/blood/blood.wxml-->
+<view class="user_view">
+    <image mode="widthFix" src="../../img/blood_transport.png" style="width: 25%;"></image>
+    <view class="pets_detail">
+        <view>
+            <text class='pets_info'>Molly</text>
+        </view>
+
+        <view>
+            <text class='pets_info'>血型：A</text>
+        </view>
+
+        <view>
+            <text class='pets_info'>状态：待匹配</text>
+        </view>
+
+        <view>
+            <text class='pets_info'>类型：汪星人</text>
+        </view>
+    </view>
+    <view class="user_welcome_view">
+        <text class="user_welcome">您好，V</text>
+    </view>
+</view>
+
+<view class="page_placeholder"></view>
+<view class="match_info_view">
+    <text style="color: gray;font-size: 20px;">血型匹配的宠物信息：</text>
+</view>
+<view class="search_view">
+    <scroll-view scroll-y="true" class="match_pets_view">
+        <view class="match_pet_view">
+            <image class="match_pet" mode="widthFix" src="../../img/pet1.png" bind:tap="onPetDetail"></image>
+        </view>
+
+        <view class="match_pet_view">
+            <image class="match_pet" mode="widthFix" src="../../img/pet2.png" bind:tap="onPetDetail"></image>
+        </view>
+
+        <view class="match_pet_view">
+            <image class="match_pet" mode="widthFix" src="../../img/pet3.png" bind:tap="onPetDetail"></image>
+        </view>
+    </scroll-view>
+</view>
+
+<view class="home_navi_view">
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png" bind:tap="onHome"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/trans.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png" bind:tap="onSelf"></image>
+    <view style="height: 100px"></view>
+</view>
