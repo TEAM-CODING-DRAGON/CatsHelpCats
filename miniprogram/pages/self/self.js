@@ -9,6 +9,12 @@ Page({
     this.checkUserAuthorization();
   },
   
+  onHome: function () {
+    wx.navigateTo({
+        url: '../home/home',
+    })
+},
+
   checkUserAuthorization: function() {
     const that = this;
     wx.getSetting({

@@ -8,8 +8,8 @@
   </view>
 </view>
 <view class="home_navi_view">
-    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png" bind:tap="onHome"></image>
     <image class="bottom_navi_btn" mode="widthFix" src="../../img/trans.png"></image>
-    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png" bind:tap="onSelf"></image>
     <view style="height: 100px"></view>
 </view>
