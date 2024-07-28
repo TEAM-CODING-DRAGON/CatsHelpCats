@@ -1,4 +1,12 @@
 <!--pages/self/self.wxml-->
+<view class="container">
+  <view class="header">
+    <button class="avatar-button" open-type="getUserProfile" bindgetuserinfo="onGetUserInfo">
+      <image class="avatar" src="{{userInfo.avatarUrl || '../../img/default_avatar.png'}}"></image>
+    </button>
+    <text class="user-id">{{userInfo.nickName ? userInfo.nickName : '点击头像登录'}}</text>
+  </view>
+</view>
 <view class="home_navi_view">
     <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png"></image>
     <image class="bottom_navi_btn" mode="widthFix" src="../../img/trans.png"></image>

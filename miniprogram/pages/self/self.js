@@ -1,66 +1,43 @@
-// pages/hospital/hospital.js
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userInfo: null
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  
+  onLoad: function () {
+    // 在页面加载时检查用户是否已经授权登录
+    this.checkUserAuthorization();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  
+  checkUserAuthorization: function() {
+    const that = this;
+    wx.getSetting({
+      success: function(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 用户已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function(res) {
+              that.setData({
+                userInfo: res.userInfo
+              });
+            }
+          });
+        }
+      }
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  
+  onGetUserInfo: function(e) {
+    if (e.detail.userInfo) {
+      // 用户按了允许授权按钮
+      this.setData({
+        userInfo: e.detail.userInfo
+      });
+      // 你可以在这里执行登录操作，比如将用户信息发送到服务器
+      console.log('用户信息:', e.detail.userInfo);
+    } else {
+      // 用户按了拒绝按钮
+      console.log('用户拒绝了授权');
+    }
   }
-})
+});
