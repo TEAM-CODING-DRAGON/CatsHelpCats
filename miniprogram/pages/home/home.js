@@ -9,25 +9,25 @@ Page({
     },
 
     onBlood: function () {
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../blood/blood',
         })
     },
 
     onHospital: function () {
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../hospital/hospital',
         })
     },
 
     onHome: function () {
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../home/home',
         })
     },
 
     onSelf: function () {
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../self/self',
         })
     },

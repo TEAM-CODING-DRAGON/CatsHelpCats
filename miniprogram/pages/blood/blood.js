@@ -5,24 +5,42 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        pets: [
+            {
+              id: 1,
+              name: 'O仔',
+              image: '/img/pet1.png'
+            },
+            {
+              id: 2,
+              name: '咖啡',
+              image: '/img/pet2.png'
+            },
+            {
+              id: 3,
+              name: '奥莉',
+              image: '/img/pet3.png'
+            }
+          ]
     },
 
     onHome: function () {
-        wx.navigateTo({
-            url: '../home/home',
+        wx.redirectTo({
+          url: '/home/home',
         })
     },
 
     onSelf: function() {
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../self/self',
         })
     },
 
-    onPetDetail: function() {
+    onPetDetail: function(e) {
+        let img = e.target.dataset.pets.image;
+        let name = e.target.dataset.pets.name;
         wx.navigateTo({
-          url: '../pet_detail/pet_detail',
+          url: '../pet_detail/pet_detail?img=' + img + '&name=' + name,
         })
     },
 

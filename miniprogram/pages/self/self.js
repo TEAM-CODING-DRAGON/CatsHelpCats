@@ -10,7 +10,7 @@ Page({
   },
   
   onHome: function () {
-    wx.navigateTo({
+    wx.redirectTo({
         url: '../home/home',
     })
 },

@@ -1,9 +1,9 @@
 <!--pages/pet_detail/pet_detail.wxml-->
 <image mode="widthFix" src="../../img/welcome.png" style="width: 100%;"></image>
 <view class="pet_detail_view">
-    <image class="pet_detail" mode="widthFix" src="../../img/pet1.png"></image>
+    <image class="pet_detail" mode="widthFix" src="{{img}}"></image>
     <view class="pet_info">
-        <text>爱宠昵称：O仔</text>
+        <text>爱宠昵称：{{name}}</text>
     </view>
     <view class="pet_info">
         <text>血型：A</text>

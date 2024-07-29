@@ -1,4 +1,5 @@
 <!--pages/hospital/hospital.wxml-->
+<image mode="widthFix" src="../../img/welcome.png" style="width: 100%;"></image>
 <view class="container">
   <block wx:for="{{hospitals}}" wx:key="id">
     <view class="hospital-item">
