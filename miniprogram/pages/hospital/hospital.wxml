@@ -1,7 +1,18 @@
 <!--pages/hospital/hospital.wxml-->
+<view class="container">
+  <block wx:for="{{hospitals}}" wx:key="id">
+    <view class="hospital-item">
+      <image class="hospital-image" src="{{item.image}}"></image>
+      <view class="hospital-info">
+        <text class="hospital-name">{{item.name}}</text>
+        <text class="hospital-location">{{item.location}}</text>
+      </view>
+    </view>
+  </block>
+</view>
 <view class="home_navi_view">
-    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/home.png" bind:tap="onHome"></image>
     <image class="bottom_navi_btn" mode="widthFix" src="../../img/trans.png"></image>
-    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png"></image>
+    <image class="bottom_navi_btn" mode="widthFix" src="../../img/self.png" bind:tap="onSelf"></image>
     <view style="height: 100px"></view>
 </view>
