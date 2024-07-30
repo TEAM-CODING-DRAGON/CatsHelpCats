@@ -28,13 +28,13 @@ Page({
   },
 
   onHome: function () {
-    wx.navigateTo({
+    wx.redirectTo({
         url: '../home/home',
     })
   },
 
   onSelf: function () {
-    wx.navigateTo({
+    wx.redirectTo({
         url: '../self/self',
     })
   },

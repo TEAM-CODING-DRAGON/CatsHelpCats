@@ -29,8 +29,13 @@
 </view>
 <view class="search_view">
     <scroll-view scroll-y="true" class="match_pets_view">
-        <view class="match_pet_view">
-            <image class="match_pet" mode="widthFix" src="../../img/pet1.png" bind:tap="onPetDetail"></image>
+        <!-- <view class="match_pet_view">
+            <view class="each_pet_view">
+                <image class="match_pet" mode="widthFix" src="../../img/pet1.png" bind:tap="onPetDetail"></image>
+                <view class="pet_info_view">
+                    <text>O仔</text>
+                </view>
+            </view>
         </view>
 
         <view class="match_pet_view">
@@ -39,7 +44,16 @@
 
         <view class="match_pet_view">
             <image class="match_pet" mode="widthFix" src="../../img/pet3.png" bind:tap="onPetDetail"></image>
-        </view>
+        </view> -->
+
+        <block wx:for="{{pets}}" wx:key="id">
+            <view class="pet_item">
+                <image class="pet_image" src="{{item.image}}" data-pets="{{item}}" bind:tap="onPetDetail"></image>
+                <view class="pet_info">
+                    <text class="pet_name">{{item.name}}</text>
+                </view>
+            </view>
+        </block>
     </scroll-view>
 </view>
 

@@ -5,17 +5,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        img: '',
+        name: ''
     },
 
     onHome: function () {
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../home/home',
         })
     },
 
     onSelf: function () {
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../self/self',
         })
     },
@@ -24,7 +25,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.setData({
+            img: options.img,
+            name: options.name
+        })
     },
 
     /**

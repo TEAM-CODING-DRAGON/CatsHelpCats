@@ -34,13 +34,20 @@
 }
 
 .match_pets_view {
+    width: 100%;
     height: 420px;
-    display: grid;
     margin-top: 50px;
+    text-align: center;
 }
 
 .match_pet_view {
     text-align: center;
+}
+
+.each_pet_view {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .match_pet {
@@ -49,10 +56,40 @@
     border-radius: 20px;
 }
 
-.home_navi_view {
-    background-color:whitesmoke;
-    border-radius: 10px;
+.hpet_-item {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
 }
+
+.pet_image {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.pet_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pet_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.home_navi_view {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0); /* 根据需要设置背景色 */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果，可选 */
+  }
 
 .bottom_navi_btn {
     width: 10%;
