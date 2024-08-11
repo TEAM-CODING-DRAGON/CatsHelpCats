@@ -1,7 +1,8 @@
 
 Page({
   data: {
-    avatarUrl: null
+    avatarUrl: null,
+    loginInfo: "请点击头像登录"
   },
   
   onLoad: function () {
@@ -34,11 +35,23 @@ Page({
     });
   },
   
-  onChooseAvatar: function(e) {
-    console.log('123' + e.detail);
-    const { avatarUrl } = e.detail;
-    this.setData({
-      avatarUrl,
-    })
+  getPhoneNumber: function(e) {
+    console.log('xxxxxxxxxxxx');
+    if (e.detail.errMsg === "getPhoneNumber:ok") {
+      const { encryptedData, iv } = e.detail;
+
+      // 使用登录凭证换取 session_key
+      wx.login({
+        success: res => {
+          if (res.code) {
+            console.log('log success.'+encryptedData +'yyyy' + iv)
+            } else {
+            console.log('登录失败！' + res.errMsg);
+          }
+        }
+      });
+    } else {
+      console.log('用户拒绝了授权');
+    }
   }
 });

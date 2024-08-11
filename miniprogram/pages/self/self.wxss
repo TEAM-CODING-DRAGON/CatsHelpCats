@@ -24,7 +24,7 @@
   margin-right: 10px;
 }
 
-.user-id {
+.login-info {
   font-size: 18px;
   color: #333;
 }
