@@ -23,7 +23,6 @@
     </view>
 </view>
 
-<view class="page_placeholder"></view>
 <view class="match_info_view">
     <text style="color: gray;font-size: 20px;">血型匹配的宠物信息：</text>
 </view>

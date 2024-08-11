@@ -1,7 +1,7 @@
 
 Page({
   data: {
-    userInfo: null
+    avatarUrl: null
   },
   
   onLoad: function () {
@@ -23,6 +23,7 @@ Page({
           // 用户已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success: function(res) {
+              console.log(res.userInfo);
               that.setData({
                 userInfo: res.userInfo
               });
@@ -33,17 +34,11 @@ Page({
     });
   },
   
-  onGetUserInfo: function(e) {
-    if (e.detail.userInfo) {
-      // 用户按了允许授权按钮
-      this.setData({
-        userInfo: e.detail.userInfo
-      });
-      // 你可以在这里执行登录操作，比如将用户信息发送到服务器
-      console.log('用户信息:', e.detail.userInfo);
-    } else {
-      // 用户按了拒绝按钮
-      console.log('用户拒绝了授权');
-    }
+  onChooseAvatar: function(e) {
+    console.log('123' + e.detail);
+    const { avatarUrl } = e.detail;
+    this.setData({
+      avatarUrl,
+    })
   }
 });
